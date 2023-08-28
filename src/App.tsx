@@ -47,6 +47,11 @@ export default function App() {
         const tambahCart = datas.map((product) => (product.id === id ? { ...product, quantity: product.quantity + 1 } : product));
         setDatas(tambahCart);
         setCart([...cart, id]);
+
+        const product = datas.find((product) => product.id === id);
+        if (product) {
+            settotalPrice((prev) => prev + product.price);
+        }
     };
 
     const subtractQuantity = (id: number) => {
