@@ -87,8 +87,8 @@ export default function App() {
                             E-<span className="font-extrabold text-[#98D8AA]">{text}</span>
                             <Cursor cursorStyle={"|"} />
                         </p>
-                        <div className="block lg:hidden">
-                            <Badge onClick={handleShowCart} content={cart.length} className={`ps-1 text-white text-2 me-1 ${cart.length > 0 ? "block" : "hidden"}`} color="danger">
+                        <div onClick={handleShowCart} className="block lg:hidden">
+                            <Badge content={cart.length} className={`ps-1 text-white text-2 me-1 ${cart.length > 0 ? "block" : "hidden"}`} color="danger">
                                 <ShoppingCart />
                             </Badge>
                         </div>
